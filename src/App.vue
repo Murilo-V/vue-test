@@ -1,5 +1,15 @@
 <template>
-  <Main />
+  <div
+    class="
+      vh-100
+      container-fluid
+      d-flex
+      justify-content-center
+      align-items-center
+    "
+  >
+    <Main />
+  </div>
 </template>
 
 <script>
@@ -17,10 +27,6 @@ export default {
 *,
 html,
 body {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
 }
@@ -28,6 +34,10 @@ body {
 html,
 body {
   background-color: #ffe766;
+}
+
+h1 {
+  color: #483698;
 }
 
 h1,
