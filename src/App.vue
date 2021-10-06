@@ -44,4 +44,14 @@ h1,
 button {
   font-family: "Comfortaa", cursive;
 }
+
+input,
+select {
+  padding: 0.25rem 0.25rem 0.25rem 1.2rem;
+  border-radius: 0.3rem;
+  border: 2px solid #403c94;
+  background-color: #fff;
+  outline: none;
+  width: 100%;
+}
 </style>
