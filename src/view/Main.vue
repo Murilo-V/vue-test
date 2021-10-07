@@ -7,26 +7,30 @@
       <p class="fs-5 mt-4 fw-bold">Dados do profissional</p>
 
       <label class="mt-4 form-label">Nome completo*</label>
-      <input type="text" placeholder="Digite o nome completo" />
+      <input type="text" v-model="name" minlength="3" maxlength="48" placeholder="Digite o nome completo" />
 
       <label class="mt-4 form-label">CPF*</label>
-      <input class="w-75" type="text" placeholder="Digite um CPF" />
+      <input class="w-75" v-model="cpf" v-maska="'###.###.###-##'" type="text" placeholder="Digite um CPF" />
 
       <label class="mt-4 form-label">Número de celular*</label>
-      <input class="w-75" type="text" placeholder="(00) 0 0000-0000" />
+      <input class="w-75" v-model="phone" type="text" v-maska="'(##) # ####-####'" placeholder="(00) 0 0000-0000" />
 
       <div class="mt-4 d-flex justify-content-between align-items-center w-100">
         <div>
           <label class="form-label">Estado*</label>
-          <select class="p-1">
-            <option value="">Selecione</option>
+          <select class="p-1" v-model="uf" @change="changeCityOptions(uf)">
+            <option value="" disabled selected>Selecione</option>
+            <option value="0">Paraná</option>
+            <option value="1">Rio Grande do Sul</option>
+            <option value="2">Santa Catarina</option>
           </select>
         </div>
 
         <div>
-          <label class="form-label">Estado*</label>
-          <select class="p-1">
-            <option value="">Selecione</option>
+          <label class="form-label">Cidade*</label>
+          <select class="p-1" v-model="city">
+            <option value="" disabled selected>Selecione</option>
+            <option v-for="option in cityOptions" :value="option" :key="option">{{option}}</option>
           </select>
         </div>
       </div>
@@ -56,6 +60,38 @@
 <script>
 export default {
   name: "Main",
+  data() {
+    return {
+      errors: {
+        name: false,
+        cpf: false,
+        phone: false,
+      },
+      name: null,
+      cpf: null,
+      phone: null,
+      uf: '',
+      city: '',
+      cityOptions: [],
+    }
+  },
+  methods: {
+    changeCityOptions(uf) {
+      switch (uf) {
+        case "0":
+          this.cityOptions = ['Londrina', 'Maringá'];
+          break;
+      
+        case "1":
+          this.cityOptions = ['Pelotas', 'Porto Alegre'];
+          break;
+        
+        case "2":
+          this.cityOptions = ['Florianópolis', 'Joinville'];
+          break;
+      }
+    },
+  },
 };
 </script>
 
