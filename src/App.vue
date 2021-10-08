@@ -54,4 +54,12 @@ select {
   outline: none;
   width: 100%;
 }
+
+.invalidInput {
+  border: 2px solid #dc3545;
+}
+
+.invalidText {
+  color: #dc3545;
+}
 </style>
