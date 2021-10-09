@@ -1,24 +1,9 @@
-# facil-consulta
+# Teste Front-end Fácil Consulta
 
-## Project setup
-```
-yarn install
-```
+## Bibliotecas utilizadas
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+- Maska
 
-### Compiles and minifies for production
-```
-yarn build
-```
+## Dificuldades
 
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- Trabalho em tempo integral, por falta de tempo não ficou responsivo. Toda a parte para o desktop foi concluída!

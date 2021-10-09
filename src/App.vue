@@ -36,11 +36,13 @@ body {
   background-color: #ffe766;
 }
 
-h1 {
+h1,
+h2 {
   color: #483698;
 }
 
 h1,
+h2,
 button {
   font-family: "Comfortaa", cursive;
 }
@@ -55,8 +57,18 @@ select {
   width: 100%;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .invalidInput {
-  border: 2px solid #dc3545;
+  border: 2px solid #dc3545 !important;
 }
 
 .invalidText {
